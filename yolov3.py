@@ -1,12 +1,13 @@
-import urllib.request
-import os
+from __future__ import division
 from zipfile import ZipFile
 from PIL import Image
-from __future__ import division
 from os import getcwd
+from torch.autograd import Variable
 import xml.etree.ElementTree as ET
 import glob, os
-from torch.autograd import Variable
+import urllib.request
+import os
+
 
 import torch 
 import torch.nn as nn
