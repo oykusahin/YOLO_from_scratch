@@ -1,30 +1,19 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[13]:
-
-
 import urllib.request
 import os
 from zipfile import ZipFile
 from PIL import Image
-import xml.etree.ElementTree as ET
-from os import getcwd
-import glob, os
 from __future__ import division
+from os import getcwd
+import xml.etree.ElementTree as ET
+import glob, os
+from torch.autograd import Variable
 
 import torch 
 import torch.nn as nn
 import torch.nn.functional as F 
-from torch.autograd import Variable
 import numpy as np
 import cv2
 
-
-# In[12]:
-
-
-##Gets the current directory
 path = os.getcwd()
 print ('The current working directory is %s' % path)
 
@@ -52,8 +41,6 @@ if len(os.listdir(path) ) == 0:
     with ZipFile(dirAnnotations, 'r') as zipObj:
         zipObj.extractall()
 
-
-# In[ ]:
 
 
 image = {}
