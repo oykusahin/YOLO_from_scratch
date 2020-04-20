@@ -1,4 +1,0 @@
-classes=12
-train=YOLOv3/data/visDrone_train.txt
-valid=YOLOv3/data/visDrone_val.txt
-names=YOLOv3/data/visDrone.names
