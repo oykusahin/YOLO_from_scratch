@@ -13,14 +13,12 @@ fIM = open("YOLOv3/data/visDrone_train.txt","w+")
 for i in range(len(all_files)):
     annotationLines = open("VisDrone2019-DET-train/annotations/"+all_files[i], "r")
   
-    im_dir_train ="visDrone/images/"+all_files[i].rstrip(".txt")+".jpg"
+    im_dir_train ="./visDrone/images/"+all_files[i].rstrip(".txt")+".jpg"
     fIM.write(im_dir_train +"\n")
   
     im_dir_source="VisDrone2019-DET-train/images/"+all_files[i].rstrip(".txt")+".jpg"
-    #im_dir_destination="visDrone/images/"
     im = Image.open(im_dir_source,"r")
     width, height = im.size
-    #im_dir_dest = shutil.move(im_dir_source, im_dir_destination) 
 
     fW = open("visDrone/labels/"+all_files[i], "w+")
     for line in annotationLines:
@@ -52,7 +50,7 @@ fIM = open("YOLOv3/data/visDrone_val.txt","w+")
 for i in range(len(all_files_val)):
     annotationLines_val = open("VisDrone2019-DET-val/annotations/"+all_files_val[i], "r")
   
-    im_dir_val ="visDrone_val/images/"+all_files_val[i].rstrip(".txt")+".jpg"
+    im_dir_val ="./visDrone_val/images/"+all_files_val[i].rstrip(".txt")+".jpg"
     fIM.write(im_dir_val +"\n")
   
     im_dir_source="VisDrone2019-DET-val/images/"+all_files_val[i].rstrip(".txt")+".jpg"
